@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="-1.0" prefHeight="57.0" prefWidth="605.0" style="-fx-background-color: beige;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/georgian_college_logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" right="175.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="33.0" prefWidth="187.0" text="Created By Ben Blanc">
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutY="355.0" prefHeight="45.0" prefWidth="605.0" style="-fx-background-color: beige;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/georgian_college_logo.png" />
+               </image>
+            </ImageView>
+            <Label text="Copyright by Georgian College - April 2023" />
+         </children>
+      </HBox>
+      <Pane layoutY="59.0" prefHeight="298.0" prefWidth="605.0" style="-fx-background-color: green;">
+         <children>
+            <Pane layoutX="6.0" layoutY="16.0" prefHeight="267.0" prefWidth="575.0" style="-fx-background-color: green; -fx-border-width: 2px; -fx-border-color: white;">
+               <children>
+                  <Circle fill="GREEN" layoutX="287.0" layoutY="134.0" radius="75.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Line endY="253.0" layoutX="288.0" layoutY="14.0" startY="-14.0" stroke="WHITE" strokeWidth="2.0" />
+                  <Arc fill="GREEN" length="90.0" radiusX="30.0" radiusY="30.0" startAngle="-90.0" stroke="WHITE" strokeType="INSIDE" type="ROUND" />
+                  <Arc fill="GREEN" layoutX="576.0" length="90.0" radiusX="30.0" radiusY="30.0" startAngle="-180.0" stroke="WHITE" strokeType="INSIDE" type="ROUND" />
+                  <Arc fill="GREEN" layoutX="576.0" layoutY="268.0" length="90.0" radiusX="30.0" radiusY="30.0" startAngle="-270.0" stroke="WHITE" strokeType="INSIDE" type="ROUND" />
+                  <Arc fill="GREEN" layoutY="268.0" length="90.0" radiusX="30.0" radiusY="30.0" stroke="WHITE" strokeType="INSIDE" type="ROUND" />
+                  <Circle fill="GREEN" layoutX="99.0" layoutY="138.0" radius="54.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="150.0" layoutY="63.0" stroke="WHITE" strokeType="INSIDE" width="107.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
