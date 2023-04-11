@@ -2,9 +2,15 @@ package ca.georgiancollege.comp1008winter2023gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class LoginController {
 
@@ -31,6 +37,38 @@ public class LoginController {
 
         if(username.getText().equals("user") && password.getText().equals("pass")){
             System.out.println("Congrats!");
+
+            //create a pop-up message
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Congrats");
+            alert.setContentText("You shall pass!");
+            alert.show();
+
+            //open a new page: tic-tac game
+
+            //attempt to implement the code to open a new page, given the starter code in HelloApplication.java file
+
+            try{
+                Stage stage = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("memory-matching-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                stage.setTitle("Memory Matching");
+                stage.setScene(scene);
+                stage.setResizable(false);
+                stage.show();
+
+
+
+            }
+            catch (Exception e){
+
+                Alert alert1 = new Alert(Alert.AlertType.ERROR);
+                alert1.setTitle("Error!");
+                alert1.setContentText("Could not load Game");
+                alert1.show();
+            }
+
         }
         else{
             error.setText("Incorrect Credentials");
